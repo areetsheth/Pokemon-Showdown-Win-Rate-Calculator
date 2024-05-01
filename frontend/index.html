@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pokemon Showdown Win Rate Calculator</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Stylesheets-->
+        <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=DotGothic16">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+
+        <!-- Scripts -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="scripts/main.js"></script>
+    </head>
+    <body>
+        <!-- Header -->
+        <div class="header" id="myHeader">
+            <h1>Pokemon Showdown Win Rate Calculator</h1>
+        </div>
+
+        <!-- Main Body -->
+        <div class="container">
+            <h1>Select your teams:</h1>
+            <!-- Main section-->
+            <section id="main">
+                <div class="container">
+                    <!-- Form for getting the teams -->
+                    <form id="pokemon-teams" method="post">
+                        <!-- Card for team 1: -->
+                        <div class="main-card">
+                            <h2>Team 1</h2>
+                            <div class="row">
+                                <div class="col-sm">
+                                    Pokemon 1 <br>
+                                    <select id="team1-pokemon1" name="team1-pokemon1" class="pokemon-dropdown" onchange="document.getElementById('team1-pokemon1-image').src = getImageUrl(this.value);">
+                                        <option value="null">Choose pokemon 1</option>
+                                    </select> <br>
+                                    <img src="images/null.png" class="select-pokemon-display" id="team1-pokemon1-image">
+                                </div>
+                                <div class="col-sm">
+                                    Pokemon 2 <br>
+                                    <select id="team1-pokemon2" name="team1-pokemon2" class="pokemon-dropdown" onchange="document.getElementById('team1-pokemon2-image').src = getImageUrl(this.value);">
+                                        <option value="null">Choose pokemon 2</option>
+                                    </select>
+                                    <img src="images/null.png" class="select-pokemon-display" id="team1-pokemon2-image">
+                                </div>
+                                <div class="col-sm">
+                                    Pokemon 3 <br>
+                                    <select id="team1-pokemon3" name="team1-pokemon3" class="pokemon-dropdown" onchange="document.getElementById('team1-pokemon3-image').src = getImageUrl(this.value);">
+                                        <option value="null">Choose pokemon 3</option>
+                                    </select>
+                                    <img src="images/null.png" class="select-pokemon-display" id="team1-pokemon3-image">
+                                </div>
+                                <div class="col-sm">
+                                    Pokemon 4 <br>
+                                    <select id="team1-pokemon4" name="team1-pokemon4" class="pokemon-dropdown" onchange="document.getElementById('team1-pokemon4-image').src = getImageUrl(this.value);">
+                                        <option value="null">Choose pokemon 4</option>
+                                    </select>
+                                    <img src="images/null.png" class="select-pokemon-display" id="team1-pokemon4-image">
+                                </div>
+                                <div class="col-sm">
+                                    Pokemon 5 <br>
+                                    <select id="team1-pokemon5" name="team1-pokemon5" class="pokemon-dropdown" onchange="document.getElementById('team1-pokemon5-image').src = getImageUrl(this.value);">
+                                        <option value="null">Choose pokemon 5</option>
+                                    </select>
+                                    <img src="images/null.png" class="select-pokemon-display" id="team1-pokemon5-image">
+                                </div>
+                                <div class="col-sm">
+                                    Pokemon 6 <br>
+                                    <select id="team1-pokemon6" name="team1-pokemon6" class="pokemon-dropdown" onchange="document.getElementById('team1-pokemon6-image').src = getImageUrl(this.value);">
+                                        <option value="null">Choose pokemon 6</option>
+                                    </select>
+                                    <img src="images/null.png" class="select-pokemon-display" id="team1-pokemon6-image">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card for team 2: -->
+                        <div class="main-card">
+                            <h2>Team 2</h2>
+                            <div class="row">
+                                <div class="col-sm">
+                                    Pokemon 1 <br>
+                                    <select id="team2-pokemon1" name="team2-pokemon1" class="pokemon-dropdown" onchange="document.getElementById('team2-pokemon1-image').src = getImageUrl(this.value);">
+                                        <option value="null">Choose pokemon 1</option>
+                                    </select>
+                                    <img src="images/null.png" class="select-pokemon-display" id="team2-pokemon1-image">
+                                </div>
+                                <div class="col-sm">
+                                    Pokemon 2 <br>
+                                    <select id="team2-pokemon2" name="team2-pokemon2" class="pokemon-dropdown" onchange="document.getElementById('team2-pokemon2-image').src = getImageUrl(this.value);">
+                                        <option value="null">Choose pokemon 2</option>
+                                    </select>
+                                    <img src="images/null.png" class="select-pokemon-display" id="team2-pokemon2-image">
+                                </div>
+                                <div class="col-sm">
+                                    Pokemon 3 <br>
+                                    <select id="team2-pokemon3" name="team2-pokemon3" class="pokemon-dropdown" onchange="document.getElementById('team2-pokemon3-image').src = getImageUrl(this.value);">
+                                        <option value="null">Choose pokemon 3</option>
+                                    </select>
+                                    <img src="images/null.png" class="select-pokemon-display" id="team2-pokemon3-image">
+                                </div>
+                                <div class="col-sm">
+                                    Pokemon 4 <br>
+                                    <select id="team2-pokemon4" name="team2-pokemon4" class="pokemon-dropdown" onchange="document.getElementById('team2-pokemon4-image').src = getImageUrl(this.value);">
+                                        <option value="null">Choose pokemon 4</option>
+                                    </select>
+                                    <img src="images/null.png" class="select-pokemon-display" id="team2-pokemon4-image">
+                                </div>
+                                <div class="col-sm">
+                                    Pokemon 5 <br>
+                                    <select id="team2-pokemon5" name="team2-pokemon5" class="pokemon-dropdown" onchange="document.getElementById('team2-pokemon5-image').src = getImageUrl(this.value);">
+                                        <option value="null">Choose pokemon 5</option>
+                                    </select>
+                                    <img src="images/null.png" class="select-pokemon-display" id="team2-pokemon5-image">
+                                </div>
+                                <div class="col-sm">
+                                    Pokemon 6 <br>
+                                    <select id="team2-pokemon6" name="team2-pokemon6" class="pokemon-dropdown" onchange="document.getElementById('team2-pokemon6-image').src = getImageUrl(this.value);">
+                                        <option value="null">Choose pokemon 6</option>
+                                    </select>
+                                    <img src="images/null.png" class="select-pokemon-display" id="team2-pokemon6-image">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-primary">Check who's winning!</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            
+        </div>
+
+        <!-- Stuff for bootstrap to work -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    </body>
+</html>

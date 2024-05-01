@@ -1,0 +1,57 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    margin: 0;
+    background-image: linear-gradient(rgba(24, 23, 24, 0.5), rgba(222, 222, 222, 0.5), rgba(24, 23, 24, 0.5));
+    background-color: "#cccccc";
+    /*padding-left: 5%;*/
+}
+
+.header {
+    background-image: url("../images/background-grid.png");
+    color: aliceblue;
+    width: 100%;
+    padding-left: 5%;
+    position: sticky; 
+    top:0;
+    font-family: "DotGothic16", serif;
+}
+
+h1 {
+    font-family: "DotGothic16", serif;
+}
+
+h2 {
+    font-family: "DotGothic16", serif;
+}
+
+.main-card {
+    padding-top: 5px;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.5);
+    min-width: 420px;
+    max-width: 1200px;
+    transition: 0.5s;
+    background-color: antiquewhite;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    /* margin-left: 5%; */
+}
+
+.main-card:hover {
+    box-shadow: 0 12px 24px 0 rgba(0, 0, 0, 0.8);
+}
+
+.pokemon-dropdown {
+    background-color: aquamarine;
+    max-width: 175px;
+}
+
+.select-pokemon-display {
+    max-width: 175px;
+    max-height: 175px;
+    align-content: center;
+}

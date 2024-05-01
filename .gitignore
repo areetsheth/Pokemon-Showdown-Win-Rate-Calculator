@@ -1,0 +1,11 @@
+backend/data/pokeapi_data.json
+backend/__pycache__
+backend/.pytest_cache
+
+sprites/*.png
+
+.pytest_cache
+
+/.vscode
+
+venv/

@@ -1,0 +1,32 @@
+name: Python Lint
+
+on:
+  push:
+    branches:
+      - main
+      - master
+  pull_request:
+    branches:
+      - main
+      - master
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Install dependencies
+      run: |
+        pip install flake8
+        echo "[flake8]" >> setup.cfg
+        echo "max-line-length = 200" >> setup.cfg  # Set the desired line length (e.g., 120 characters)
+
+    - name: Run Flake8
+      run: flake8
